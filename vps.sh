@@ -1,4 +1,3 @@
-#! /bin/bash
 printf "Installing Linux RDP Please Wait... " >&2
 {
 sudo useradd -m PingBypass
