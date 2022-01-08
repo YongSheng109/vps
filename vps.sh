@@ -1,8 +1,9 @@
+#! /bin/bash
 printf "Installing Linux RDP Please Wait... " >&2
 {
-sudo useradd -m PingBypass
-sudo adduser PingBypass sudo
-echo 'PingBypass:123456' | sudo chpasswd
+sudo useradd -m CuteWolfie
+sudo adduser CuteWolfie sudo
+echo 'CuteWolfie:103465' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
@@ -17,13 +18,13 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
-sudo adduser user chrome-remote-desktop
+sudo adduser CuteWolfie chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
 printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debian Linux And Paste Down\n'
 read -p "Paste Here: " CRP
-su - user -c """$CRP"""
+su - CuteWolfie -c """$CRP"""
 printf 'Access Your RDP At https://remotedesktop.google.com/access/ \n\n'
 if sudo apt-get upgrade &> /dev/null
 then
